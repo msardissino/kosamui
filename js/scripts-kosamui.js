@@ -71,29 +71,30 @@ var swiper = new Swiper('.swiper-container', {
     origin: 'right',
     distance: '150px'
   })
-  sr.reveal('.historia', {
-    duration: 2500,
-    origin: 'left',
-    distance: '150px'
-  })
-  sr.reveal('.mision', {
+  sr.reveal('.emp-title', {
     duration: 2500,
     origin: 'bottom',
     distance: '150px'
   })
-  sr.reveal('.vision', {
+  sr.reveal('.emp-text', {
     duration: 2500,
-    origin: 'right',
+    origin: 'bottom',
     distance: '150px'
   })
 //Smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+// hamburguer button
+      var $hamburger = $(".hamburger");
+      $hamburger.on("click", function(e) {
+        $hamburger.toggleClass("is-active");
+        // Do something else, like open/close menu
+      });
 });
