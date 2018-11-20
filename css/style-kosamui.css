@@ -401,6 +401,7 @@ ul{
           .navbar{
             height: 100px;
             padding: 0;
+            transition: all 2s;
           }
           .navbar .container{
             height: 100%;
@@ -730,26 +731,52 @@ ul{
       }
     }
     /*Query La Empresa*/
-    @media screen and (min-width: 767px){
-      #empresa .col-12{
-        margin: 0 !important;
-        padding: 10px 0; 
-        width: 100%;
-        font-size: 19px;
+    @media screen and (max-width:767px){
+      .empresa, .contacto, .newsletter{
+        margin-top: 30px;
+      }
+      .newsletter .news-title{
+        margin-top: 15px;
+        font-size: 16px;
+      }
+      .newsletter .news-title h3{
+        font-size: 23px;
+      }
+      .newsletter .news-form form input{
+        margin-left: 30px;
+      }
+      .footer{
+        text-align: center;
+      }
+      .col-destacado{
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: left;
+      }
+      .links{
+        text-align: left;
+      }
+    }
+    @media screen and (max-width:320px){
+      .inf-header{
+        font-size: 13px;
+      }
+      .newsletter .news-title {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content: flex-start;
-        padding: 0 20px;
+        margin-top: 15px;
+        font-size: 12px;
       }
-      #empresa{
-        margin-top: 30px;
-        margin-bottom: 30px;
+      .newsletter .news-title h3{
+        font-size: 16px;
       }
-      #empresa h3{
-        margin-top: 5px;
-        padding: 10px 0 10px 0;
+      .newsletter .news-form form input{
+        margin-left: 0px;
+        font-size: 12px;
       }
+      
     }
 /* --------------------------------------------- FIN QUERYS----------------------------------------------------*/
 /* ------------------------------------------------------------------------------------------------------------*/

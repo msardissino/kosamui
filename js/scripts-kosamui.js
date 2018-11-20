@@ -29,46 +29,42 @@ var swiper = new Swiper('.swiper-container', {
 });
 // Fin Swiper Slide Nuevos productos
 // Scroll Reveal
-  // window.sr = ScrollReveal();
-  // sr.reveal('.info', {
-  //   duration: 3000,
-  //   origin: 'left',
-  //   distance: '100px',
-  //   delay: 500,
-  // })
-  // sr.reveal('.logo', {
-  //   duration: 2500,
-  //   origin: 'left',
-  //   delay: 500,
-  //   distance:'150px'
+  window.sr = ScrollReveal();
+  sr.reveal('.info', {
+    duration: 3000,
+    origin: 'left',
+    distance: '100px',
+    delay: 500,
+  })
+  sr.reveal('.logo', {
+    duration: 2500,
+    origin: 'left',
+    delay: 500,
+    distance:'150px'
 
-  // })
-  // sr.reveal('.navbar-nav', {
-  //   duration: 2000,
-  //   origin: 'top',
-  //   distance: '100px'
+  })
+  sr.reveal('.navbar-nav', {
+    duration: 2000,
+    origin: 'top',
+    distance: '100px'
 
-  // })
-  // sr.reveal('#Carrusel-kosamui', {
-  //   duration: 2000,
-  //   delay: 200
-  // })
-  // sr.reveal('#productos', {
-  //   duration: 2500,
-  //   origin: 'left',
-  //   distance: '100px',
-  //   delay: 300
-  // })
-  // sr.reveal('.emp-title', {
-  //   duration: 2500,
-  //   origin: 'bottom',
-  //   distance: '150px'
-  // })
-  // sr.reveal('.emp-text', {
-  //   duration: 2500,
-  //   origin: 'bottom',
-  //   distance: '150px'
-  // })
+  })
+  sr.reveal('#Carrusel-kosamui', {
+    duration: 2000,
+    delay: 200
+  })
+  sr.reveal('.col-empresa h3', {
+    duration: 2000,
+    origin:'bottom',
+    distance:'150px',
+    delay: 200
+  })
+  sr.reveal('.col-empresa p', {
+    duration: 2000,
+    origin:'bottom',
+    distance:'150px',
+    delay: 200
+  })
 //Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
