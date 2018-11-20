@@ -401,7 +401,6 @@ ul{
           .navbar{
             height: 100px;
             padding: 0;
-            transition: all 2s;
           }
           .navbar .container{
             height: 100%;
