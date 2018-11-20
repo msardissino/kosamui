@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flip 3D</title>
+    <style>
+    .flip3D{
+        width: 240px;
+        height: 200px;
+        margin: 10px;
+        float: left;
+
+    }
+    .contenedor{
+        /* background-color: red; */
+    }
+    .front img, .back img   {
+        max-width: 100%;
+    }
+    .front a{
+        display: block;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.1em;
+        border: 3px solid #000;
+        border-radius: 5px;
+        width: 120px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0.5em;
+    }
+    .flip3D .front{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: perspective(600px) rotateY(0deg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background: #33adba;
+        background-image: url(images/productos/spray.png);
+
+        width: 100%;
+        height: 325px;
+        border-radius: 7px;
+        backface-visibility: hidden;
+        transition: transform .5s linear 0s; 
+    }
+    .flip3D .back{
+        position: absolute;
+        transform: perspective(600px) rotateY(180deg);
+        background: #80BFFF;
+        background-image: url(images/productos/Aromatizador-Spray.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 240px;
+        height: 304px;
+        border-radius: 7px;
+        backface-visibility: hidden;
+        transition: transform .5s linear 0s; 
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .back .a-producto{
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        border: 2px solid black;
+        font-size: 25px;
+        margin-bottom: 30px;
+
+    }
+    .flip3D:hover .front{
+        transform: perspective(600px) rotateY(-180deg);  
+    }
+    .flip3D:hover .back{
+        transform: perspective(600px
+        ) rotateX(0deg);  
+    }
+    </style>
+</head>
+<body>
+    <div class="flip3D">
+        <div class="contenedor">
+          <div class="back">
+            <!-- <img src="images/productos/Aromatizador-Spray.jpg" alt=""> -->
+            <a class="a-producto" href="">Detalles</a>
+          </div>
+          <div class="front">
+            <!-- <img src="images/productos/spray.png" alt=""> -->
+          </div>
+        </div>
+    </div>
+    <div class="flip3D">
+        <div class="contenedor">
+          <div class="back">
+            <img src="images/productos/Difusor-Aromatico-Boton2.jpg" alt="">
+          </div>
+          <div class="front">
+            <img src="images/productos/difusor.png" alt="">
+          </div>
+        </div>
+    </div>
+</body>
+</html>
