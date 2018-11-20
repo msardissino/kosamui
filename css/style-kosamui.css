@@ -578,22 +578,37 @@ ul{
             line-height: 50px;
             margin-left: 5px;
           }
+          .news-form{
+            max-width: 100%;
+          }
+          .news-form form{
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
           .news-form input{
-            width: 400px;
-            height: 35px;
+            width: 350px;
+            height: 40px;
           }
           .news-form a{
             margin: 20px 0;
-          color: #ffffff;
-          background-color: var(--color4);
-          padding: 8px 15px;
-          width: 50px;
-          height: 30px;
-          border-radius: 10px;
-          text-align: center;
-          text-decoration: none;
-          letter-spacing: 3px;
+            margin-left: 10px;
+            color: #ffffff;
+            background-color: var(--color4);
+            padding: 8px 15px;
+            width: 100px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 3px;
           }
+          @media screen and (max-width:480px){
+            .col-news{
+              flex-direction: column;
+            }
+          }
+
           /* fin Newsletter */
 /* -------------------- FIN MAIN -------------------- */
 
