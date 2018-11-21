@@ -401,6 +401,7 @@ ul{
           .navbar{
             height: 100px;
             padding: 0;
+            transition: all .2s;
           }
           .navbar .container{
             height: 100%;
@@ -473,7 +474,9 @@ ul{
           }
         /* Fin Slide Nuevos Productos */
         /* La Empresa */
-
+          .empresa{
+            margin-top: 30px;
+          }
           .col-empresa{
             text-align: center;
             color: #ffffff;
@@ -489,6 +492,9 @@ ul{
           }
         /* Fin La Empresa */
         /* Contacto */
+        .contacto{
+          margin-top: 30px;
+        }
         .contacto p a{
           color: var(--color4);
           text-decoration: none;
@@ -562,9 +568,7 @@ ul{
             align-items: center;
             justify-content: space-between;
           }
-          .news-title{
-            display: flex;
-          }
+          
           .news-title span{
             background-color: rgba(255,255,255,.1);
             height: 50px;
@@ -672,6 +676,15 @@ ul{
         .footer .fragancias a:hover{
           background-color: var(--color4);
         }
+        .redes-sociales{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .redes-sociales li{
+          font-size: 25px;
+          padding: 0  10px;
+        }
         .footer .by{
           display: flex;
           align-items: center;
@@ -684,7 +697,11 @@ ul{
 /* -------------------------------------------------------------------------------------------------------*/
 /* -------------------------------------------------------------------------------------------------------*/
 /* ---------------------------------------------QUERYS----------------------------------------------------*/
-    /* Query boton hamburguesa */
+
+
+
+
+/* Query boton hamburguesa */
     @media screen and (max-width: 991px){
       button.navbar-toggler{
         border: none;
@@ -756,6 +773,29 @@ ul{
         text-align: left;
       }
     }
+    @media screen and (min-width:320px){
+      .inf-header{
+        font-size: 13px;
+      }
+      .newsletter .news-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 12px;
+      }
+      .newsletter .news-title h3{
+        font-size: 16px;
+      }
+      .newsletter .news-form form input{
+        margin-left: 0px;
+        font-size: 12px;
+      }
+      .redes-sociales{
+        justify-content: center;
+      }
+    }
     @media screen and (max-width:320px){
       .inf-header{
         font-size: 13px;
@@ -775,8 +815,20 @@ ul{
         margin-left: 0px;
         font-size: 12px;
       }
-      
+      .redes-sociales{
+        justify-content: center;
+      }
     }
+    @media screen and (min-width:768px){
+      .newsletter .news-title{
+        display: flex;
+        flex-direction: row;
+        font-size: 22px;
+      }
+      .newsletter .news-title h3{
+        font-size: 22px;
+      }
+    }    
 /* --------------------------------------------- FIN QUERYS----------------------------------------------------*/
 /* ------------------------------------------------------------------------------------------------------------*/
 /* -----------------------------------------------------------------------------------------------------------*/
