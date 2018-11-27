@@ -448,10 +448,15 @@ ul{
 /* -------------------- FIN HEADER -------------------- */
 
 /* -------------------- MAIN -------------------- */
-.switchSpray{
-  background-color: transparent;
-  border: none;
-}
+/* Ajax Btn */
+          .switchSpray, .switchDifu, .switchFresh{
+            background-color: transparent;
+            border: none;
+          }
+          .switchSpray:focus, .switchDifu:focus, .switchFresh:focus{
+            outline: none;
+          }
+          /* fin ajax btn */
           .productos{
             margin-top: 50px;
             margin-bottom: 50px;
