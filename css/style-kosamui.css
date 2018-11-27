@@ -472,7 +472,7 @@ ul{
             padding-top: 20px;
             font-size: 25px;
             color: var(--color4);
-            opacity: 0;
+            opacity: .2;
           }
           .productos .icono-producto:hover h2{
             opacity: 1;
