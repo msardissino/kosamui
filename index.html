@@ -86,10 +86,13 @@
           <div class="container">
               <div style="max-width:100%; overflow: hidden;" class="titulo-producto"><h3 style="">Nuestros productos</h3></div>
             <div class="row">
-              <div class="col-12 col-sm-6 col-md-3 icono-producto">
-                <a href="spray.html"><img src="png/rociador-index.png" alt=""></a>
-                <h2>Aromatizador Spray</h2>                  
-                </div>
+                <div class="col-12 col-sm-6 col-md-3 icono-producto caja1" id="caja1">
+                    <button class="switchSpray">
+                        <img src="png/rociador-index.png" alt="">
+                    </button>
+                    
+                    <h2>Aromatizador Spray</h2>                  
+                    </div>
                 <div class="col-12 col-sm-6 col-md-3 icono-producto">
                   <a href="difusores.html"><img src="png/aromatizador-index.png" alt=""></a>
                   <h2>Difusores</h2>
@@ -108,7 +111,16 @@
           </div>
         </section>
         <!-- Fin Section #2 Productos -->
+        <!-- Productos resultado AJAX -->
+  <!-- Productos resultado AJAX -->
+  <section class="section-ajax">
+      <div class="loader"></div>
+      <div class="container caja2" id="caja2">
 
+      </div>
+    </section>
+    <!-- Fin Productos resultado AJAX -->
+        <!-- Fin Productos resultado AJAX -->
         <!--Section #3 Slider Nuevos Productos -->
         <section class="nuevos-productos">
           <div class="container">
@@ -150,7 +162,7 @@
         <!-- Fin Section #3 Slider Nuevos Productos -->
 
         <!-- Section #4 La Empresa -->
-        <section class="empresa" id="empresa">
+        <!-- <section class="empresa" id="empresa">
           <div class="container">
             <div class="row">
               <div class="col-12 col-sm-12 col-md-4 col-empresa">
@@ -182,7 +194,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Fin Section #4 La Empresa -->
 
         <!-- Section #5 Contacto -->
@@ -380,5 +392,6 @@
   <script src="js/lightbox.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/scripts-kosamui.js"></script>
+  <script src="ajax.js"></script>
 </body>
 </html>
