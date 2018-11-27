@@ -654,6 +654,24 @@ ul{
           }
 
           /* fin Newsletter */
+          /* revendedores */
+          .col-rev{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .col-rev img{
+            max-width: 50%;
+            height: 100px;
+          }
+          .description-rev{
+            padding-top: 20px;
+            height: 50%;
+          }
+
+          /* fin revendedores */
 /* -------------------- FIN MAIN -------------------- */
 
 
