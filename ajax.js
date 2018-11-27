@@ -1,7 +1,7 @@
 // alert("Funcion!");
 $(document).ready(function(){
   $('.caja1').on('click','button.switchSpray', function(){
-    $.ajax('sprays.html', {
+    $.ajax('resultado.html', {
         beforeSend: function(){
           $('.loader').text('Cargando...');
         }
