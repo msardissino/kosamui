@@ -382,8 +382,11 @@ ul{
 }
 .btn-wapp:hover
 {
-  transform: scale(1.2) rotate(-20deg);
+  transform: scale(1.2);
 
+}
+.carousel-item img{
+  max-height: 500px;
 }
 /* FIN CUSTOM CLASES GENERALES*/
 
@@ -453,15 +456,26 @@ ul{
           .productos .icono-producto{
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 250px;
-            transition: .6s;
+            transition: 1s;
+            text-align: center;
             
           }
           .productos .icono-producto:hover{
               transform: scale(1.1);
               
             box-shadow:0 3px 1px rgba(0, 0, 0, 0.1);
+          }
+          .productos .icono-producto h2{
+            padding-top: 20px;
+            font-size: 25px;
+            color: var(--color4);
+            opacity: 0;
+          }
+          .productos .icono-producto:hover h2{
+            opacity: 1;
           }
           /* slider */
           
@@ -906,16 +920,16 @@ ul{
 .cajita-spray{
   transition: .6s;
   width: 100px;
-  height: 83%;
+  height: 60%;
   position: absolute;
   top: 0;
   left: -150px;
   /* transform: translateX(-100px); */
   z-index: 10;
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.5);
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   border-radius: 3px;
@@ -926,9 +940,10 @@ ul{
   align-items: center;
   text-decoration: none;
   color: #000000;
+  font-size: 12px;
 }
 .cajita-spray img{
-  width:75%;
+  width:50%;
   transition: .4s;
 }
 .cajita-spray img:hover{
@@ -1001,4 +1016,25 @@ ul{
   padding-left: 100px;
   padding-top: 100px;
   color: #ffffff;
+}
+
+/* --------------------------------------------- producto-final.html----------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------*/
+.img-producto-final{
+  width: 100%;
+}
+.img-producto-final img{
+  max-width: 100%;
+}
+.portada-final{
+width: 100%;
+height: 250px;
+background-image: url(../images/background/bamboo.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+margin-bottom: 30px;
+}
+.producto-final{
+  margin-bottom: 30px;
 }
