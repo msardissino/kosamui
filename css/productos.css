@@ -1,0 +1,15 @@
+.box-producto{
+  text-align: center;
+  box-shadow:0 3px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+.box-producto img{
+  max-width: 100%;
+}
+.box-producto-link{
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+  color: va(--color1);
+  font-size: 20px;
+}

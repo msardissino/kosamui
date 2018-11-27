@@ -436,10 +436,21 @@ ul{
             margin-top: 50px;
             margin-bottom: 50px;
           }
-          .productos div img {
-            max-width: 100%;
+          .productos .icono-producto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            transition: .6s;
+            
           }
-
+          .productos .icono-producto:hover{
+              transform: scale(1.1);
+              
+            box-shadow:0 3px 1px rgba(0, 0, 0, 0.1);
+          }
+          /* slider */
+          
         /* Slide Nuevos Productos */
           .nuevos-productos{
             overflow: hidden;
@@ -459,7 +470,7 @@ ul{
             position: absolute;
             height: .5px;
             width: 280px;
-            top: 0.7em;
+            top: 0.65em;
             background-color: rgba(0,0,0,.3);
           }
           .titulo-producto h3:before{
@@ -529,6 +540,7 @@ ul{
         .contacto textarea{
           height: 100px;
           max-height: 250px;
+          border: 1px solid rgba(0,0,0,.2);
         }
         .inputbox input:focus,
         .contacto textarea:focus{
@@ -685,12 +697,18 @@ ul{
           font-size: 25px;
           padding: 0  10px;
         }
-        .footer .by{
+        .footer .col-by{
+          margin-top: 15px;
+          height: 50px;
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #5a5a5a;
+          
+          background-color: #2a2a2a;
         } 
+        .footer .col-by p{
+          margin-top: 20px;
+        }
 /* -------------------- FIN FOOTER --------------------  */
 
 
@@ -772,6 +790,7 @@ ul{
       .links{
         text-align: left;
       }
+      
     }
     @media screen and (min-width:320px){
       .inf-header{
@@ -828,7 +847,144 @@ ul{
       .newsletter .news-title h3{
         font-size: 22px;
       }
+      .redes-sociales{
+        justify-content: flex-start;
+      }
     }    
 /* --------------------------------------------- FIN QUERYS----------------------------------------------------*/
 /* ------------------------------------------------------------------------------------------------------------*/
 /* -----------------------------------------------------------------------------------------------------------*/
+
+
+/* --------------------------------------------- Productos.html----------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------*/
+.portada{
+  position: relative;
+  width: 100%;
+  background-image: url(../images/background/bg-productos.jpg);
+  margin-bottom: 30px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+.portada h1{
+  margin-top: 0;
+  font-size: 60px;
+  padding-left: 100px;
+  padding-top: 100px;
+  color: #ffffff;
+}
+.box-producto{
+  overflow: hidden;
+  position: relative;
+}
+.box-producto-link{
+  color: var(--color2);
+  transition: .6s;
+}
+.box-producto:hover .box-producto-link{
+  color: var(--color4);
+  text-decoration: none;
+  font-weight: 600;
+}
+.cajita-spray{
+  transition: .6s;
+  width: 100px;
+  height: 83%;
+  position: absolute;
+  top: 0;
+  left: -150px;
+  /* transform: translateX(-100px); */
+  z-index: 10;
+  background: rgba(255,255,255,.8);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+}
+.cajita-spray a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+.cajita-spray img{
+  width:75%;
+  transition: .4s;
+}
+.cajita-spray img:hover{
+  transform: scale(1.2);
+}
+.box-producto:hover .cajita-spray{
+  left:0;
+}
+
+/* --------------------------------------------- difusores.html----------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------*/
+
+.portada-difusores{
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 250px;
+  background-image: url(../images/background/difusores-aromaticos-top-background-1024x399.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+  background-size: cover;
+}
+.portada-difusores h1{
+  color: #ffffff;
+  font-size: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.detalle-difusores h4{
+  color: var(--color4);
+  font-weight: 600;
+}
+.detalle-difusores p{
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.portada-spray{
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 250px;
+  background-image: url(../images/background/aromatizadores-spray-top-background-1024x399.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+  background-size: cover;
+}
+.portada-spray h1{
+  margin-top: 0;
+  font-size: 40px;
+  padding-left: 100px;
+  padding-top: 100px;
+  color: #ffffff;
+}
+.portada-spray-fresh{
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 250px;
+  background-image: url(../images/background/spray-fresh-top-background-1024x399.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+  background-size: cover;
+}
+.portada-spray-fresh h1{
+  margin-top: 0;
+  font-size: 40px;
+  padding-left: 100px;
+  padding-top: 100px;
+  color: #ffffff;
+}
