@@ -14,6 +14,20 @@
   color: va(--color1);
   font-size: 20px;
 }
+.bamboo{
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.bamboo:focus{
+  outline: none;
+}
 .loader{
   display: none;
 }
@@ -27,55 +41,75 @@
           </p>
           <hr>
           <div class="detalle-difusores">
-              <h4>Las fragancias siempre forman parte de tu vida, llevalas con vos a todos lados con este producto.</h4>
-              <p>El aromatizador spray es un producto indicado para aromatizar ambientes y todo tipo de superficies. Se recomienda aplicar sobre la ropa recién planchada, en la cama recién hecha, en el interior del auto, en el baño, etc. 
+              <!-- <h4>Las fragancias siempre forman parte de tu vida.</h4> -->
+              <!-- <p>El aromatizador spray es un producto indicado para aromatizar ambientes y todo tipo de superficies. Se recomienda aplicar sobre la ropa recién planchada, en la cama recién hecha, en el interior del auto, en el baño, etc. 
                 Aplica Kosamui Aromatizante Spray donde creas que necesites un buen aroma para compartir.
-              </p>
+              </p> -->
               <hr>
             </div>
       </div>
     <!-- Columna Producto #1 -->
-          <h2 style="color:#33adba; text-align: center;margin-bottom: 30px;">Aromatizadores Spray</h2>
+          <!-- <h2 style="color:#33adba; text-align: center;margin-bottom: 30px;">Aromatizadores Spray</h2> -->
         <div class="row">
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-prod">
             <div class="box-producto">
-              <div class="cajita-spray">
+              <!-- <div class="cajita-spray">
                 <a href="spray-fresh.html"><img src="png/spray.png" alt="">Spray Fresh</a>
                 <a href="difusores.html"><img src="png/aromatizador.png" alt="">Difusor</a>
                 <a href="spray.html"><img src="png/rociador.png" alt="">Spray</a>
                 <a href="aceites.html"><img src="png/aceite.png" alt="">Aceite</a>
-              </div>
-              <a href="producto-final.html">
-                <img src="images/difusores/Difusor-Aromatico-Bamboo.jpg" alt="Fragancia Kosamui Bamboo">
+              </div> -->
+              <a href="#">
               </a>
-              <a class="box-producto-link" href="producto-final.html">Bamboo</a>
+              <!-- <a class="box-producto-link" href="producto-final.html">Bamboo</a> -->
+              
+              <button class="bamboo box-producto-link"><img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Bamboo">Bamboo</button>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
                   <a href="">
-                    <img src="images/difusores/Difusor-Aromatico-Flower.jpg" alt="Fragancia Kosamui Flower">
+                    <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Flower">
                   </a>
-                  <a class="box-producto-link" href="">Flower</a>
+                  <!-- <a class="box-producto-link" href="">Flower</a> -->
+                  <button class="bamboo box-producto-link">Flower</button>
                 </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
                   <a href="">
-                    <img src="images/difusores/Difusor-Aromatico-Lemon.jpg" alt="Fragancia Kosamui Lemon">
+                    <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Lemon">
                   </a>
-                  <a class="box-producto-link" href="">Lemon</a>
+                  <!-- <a class="box-producto-link" href="">Lemon</a> -->
+                  <button class="bamboo box-producto-link">Lemon</button>
                 </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
                   <a href="">
-                    <img src="images/difusores/Difusor-Aromatico-Uva.jpg" alt="Fragancia Kosamui Uva">
+                    <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Uva">
                   </a>
-                  <a class="box-producto-link" href="">Uva</a>
+                  <!-- <a class="box-producto-link" href="">Uva</a> -->
+                  <button class="bamboo box-producto-link">Uva</button>
                 </div>
           </div>
         </div>
-   </div>
+        <hr>
+   </div> <!--Fin container-->
    
-  
+  <script>
+      $('.box-producto').on('click','button.bamboo', function(){
+    $.ajax('final.html', {
+        beforeSend: function(){
+          $('.loader').text('Cargando...');
+        }
+    })
+    .done(function(respuesta){
+        $('.caja3').html(respuesta);
+      })
+    .always(function(){
+      $('.loader').text('Finalizo la Carga.');
+    });
+      
+  });
+  </script>
