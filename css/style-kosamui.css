@@ -424,7 +424,7 @@ ul{
             height: 100%;
           }
           .navbar.navbar-light{
-            background-color: rgba(255,255,255,.6)!important;
+            background-color: rgba(255,255,255,.9)!important;
           }
           .navbar-nav{
             display: flex;
@@ -435,6 +435,10 @@ ul{
             height: 100%;
             display: flex;
             align-items: center;
+            color: #000000;
+            font-weight: 600;
+            letter-spacing: 1px;
+            
           }
           .navbar-nav a:hover{
             border-top: 3px solid var(--color4);
