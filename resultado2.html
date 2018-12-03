@@ -14,6 +14,20 @@
       color: va(--color1);
       font-size: 20px;
     }
+    .bamboo{
+      border: none;
+      background-color: transparent;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .bamboo:focus{
+      outline: none;
+    }
     .loader{
       display: none;
     }
@@ -28,55 +42,116 @@
               <hr>
               <div class="detalle-difusores">
                   <!-- <h4>Las fragancias siempre forman parte de tu vida.</h4> -->
-                  <!-- <p>Los Dífusores Aromaticos sirven para aromatizar todo tipo de ambientes y hacerlos mucho mas agradables y placenteros. 
-                  Funcionan con distintos aceites escenciales y de manera muy simple, 
-                  se colocan las varillas y el perfume comienza a esparcirse por el lugar que elijas.
-                </p> -->
-                <hr>
+                  <!-- <p>El aromatizador spray es un producto indicado para aromatizar ambientes y todo tipo de superficies. Se recomienda aplicar sobre la ropa recién planchada, en la cama recién hecha, en el interior del auto, en el baño, etc. 
+                    Aplica Kosamui Aromatizante Spray donde creas que necesites un buen aroma para compartir.
+                  </p> -->
+                  <hr>
                 </div>
           </div>
         <!-- Columna Producto #1 -->
-              <!-- <h2 style="color:#33adba; text-align: center;margin-bottom: 30px;">Difusores</h2> -->
+              <!-- <h2 style="color:#33adba; text-align: center;margin-bottom: 30px;">Aromatizadores Spray</h2> -->
             <div class="row">
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-prod">
-                <div class="box-producto">
-                  <div class="cajita-spray">
-                    <!-- <a href="spray-fresh.html"><img src="png/spray.png" alt="">Spray Fresh</a>
-                    <a href="difusores.html"><img src="png/aromatizador.png" alt="">Difusor</a>
-                    <a href="spray.html"><img src="png/rociador.png" alt="">Spray</a>
-                    <a href="aceites.html"><img src="png/aceite.png" alt="">Aceite</a> -->
-                  </div>
-                  <a href="producto-final.html">
-                    <img src="png/aromatizador-prod-final.png" alt="Fragancia Kosamui Bamboo">
-                  </a>
-                  <a class="box-producto-link" href="producto-final.html">Bamboo</a>
-                </div>
-              </div>
+              
               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                   <div class="box-producto">
-                      <a href="">
+                      <!-- <a href="" id="btn"> -->
                         <img src="png/aromatizador-prod-final.png" alt="Fragancia Kosamui Flower">
-                      </a>
-                      <a class="box-producto-link" href="">Flower</a>
+                      <!-- </a> -->
+                      <!-- <a class="box-producto-link" href="">Flower</a> -->
+                      <button class="bamboo box-producto-link" id="bamboo2">Bamboo</button>
                     </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                   <div class="box-producto">
-                      <a href="">
+                      <!-- <a href="" id="btn"> -->
+                        <img src="png/aromatizador-prod-final.png" alt="Fragancia Kosamui Flower">
+                      <!-- </a> -->
+                      <!-- <a class="box-producto-link" href="">Flower</a> -->
+                      <button class="bamboo box-producto-link" id="flower2">Flower</button>
+                    </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <div class="box-producto">
+                      <!-- <a href=""> -->
                         <img src="png/aromatizador-prod-final.png" alt="Fragancia Kosamui Lemon">
-                      </a>
-                      <a class="box-producto-link" href="">Lemon</a>
+                      <!-- </a> -->
+                      <!-- <a class="box-producto-link" href="">Lemon</a> -->
+                      <button class="bamboo box-producto-link" id="lemon2">Lemon</button>
                     </div>
               </div>
               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                   <div class="box-producto">
-                      <a href="">
+                      <!-- <a href=""> -->
                         <img src="png/aromatizador-prod-final.png" alt="Fragancia Kosamui Uva">
-                      </a>
-                      <a class="box-producto-link" href="">Uva</a>
+                      <!-- </a> -->
+                      <!-- <a class="box-producto-link" href="">Uva</a> -->
+                      <button class="bamboo box-producto-link" id="uva2">Uva</button>
                     </div>
               </div>
             </div>
-       </div>
+            <hr>
+       </div> <!--Fin container-->
        
+      <script>
+          $('.box-producto').on('click','button.bamboo', function(){
+        $.ajax('final.html', {
+            beforeSend: function(){
+              $('.loader').text('Cargando...');
+            }
+        })
+        .done(function(respuesta){
+            $('.caja3').html(respuesta);
+          })
+        .always(function(){
+          $('.loader').text('Finalizo la Carga.');
+        });
+        
+      });
+    
+      const btn21 = document.getElementById('flower2');
+      let $imagen2 = document.getElementById('final-img');
+      let $title2 = document.getElementById('final-title');
+      let $detail2 = document.getElementById('final-details');
       
+      const btn22 = document.getElementById('lemon2');
+    
+      const btn23 = document.getElementById('uva2');
+      const btn24 = document.getElementById('bamboo2');
+      
+      btn21.addEventListener('click', () => {
+        $imagen2.setAttribute('src', 'images/difusores/Difusor-Aromatico-Flower.jpg');
+        $title2.textContent = "Difusor - Flower"
+        $detail2.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+          laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+          impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+          accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+          illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
+      })
+      btn22.addEventListener('click', () => {
+        $imagen2.setAttribute('src', 'images/difusores/Difusor-Aromatico-Lemon.jpg');
+        $title2.textContent = "Difusor - Lemon"
+        $detail2.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+          laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+          impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+          accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+          illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
+      })
+      btn23.addEventListener('click', () => {
+        $imagen2.setAttribute('src', 'images/difusores/Difusor-Aromatico-Uva.jpg');
+        $title2.textContent = "Difusor - Uva"
+        $detail2.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+          laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+          impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+          accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+          illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
+      })
+      btn24.addEventListener('click', () => {
+        $imagen2.setAttribute('src', 'images/difusores/Difusor-Aromatico-Bamboo.jpg');
+        $title2.textContent = "Difusor - Bamboo"
+        $detail2.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+          laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+          impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+          accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+          illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
+      })
+      </script>

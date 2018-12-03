@@ -51,21 +51,15 @@
     <!-- Columna Producto #1 -->
           <!-- <h2 style="color:#33adba; text-align: center;margin-bottom: 30px;">Aromatizadores Spray</h2> -->
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-prod">
-            <div class="box-producto">
-              <!-- <div class="cajita-spray">
-                <a href="spray-fresh.html"><img src="png/spray.png" alt="">Spray Fresh</a>
-                <a href="difusores.html"><img src="png/aromatizador.png" alt="">Difusor</a>
-                <a href="spray.html"><img src="png/rociador.png" alt="">Spray</a>
-                <a href="aceites.html"><img src="png/aceite.png" alt="">Aceite</a>
-              </div> -->
-              <a href="#">
-              </a>
-              <!-- <a class="box-producto-link" href="producto-final.html">Bamboo</a> -->
-              
-              <button class="bamboo box-producto-link ">
-                <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Bamboo">Bamboo</button>
-            </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="box-producto">
+                  <!-- <a href="" id="btn"> -->
+                    <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Flower">
+                  <!-- </a> -->
+                  <!-- <a class="box-producto-link" href="">Flower</a> -->
+                  <button class="bamboo box-producto-link" id="bamboo2">Bamboo</button>
+                </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
@@ -87,11 +81,11 @@
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
-                  <a href="">
+                  <!-- <a href=""> -->
                     <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Uva">
-                  </a>
+                  <!-- </a> -->
                   <!-- <a class="box-producto-link" href="">Uva</a> -->
-                  <button class="bamboo box-producto-link">Uva</button>
+                  <button class="bamboo box-producto-link" id="uva2">Uva</button>
                 </div>
           </div>
         </div>
@@ -114,24 +108,51 @@
     
   });
 
-  const btn = document.getElementById('flower2');
-  const $imagen = document.getElementById('final-img');
-  const $title = document.getElementById('final-title');
-  const $detail = document.getElementById('final-details');
+  const btn11 = document.getElementById('flower2');
+  let $imagen = document.getElementById('final-img');
+  let $title = document.getElementById('final-title');
+  let $detail = document.getElementById('final-details');
+  let $lightBox = document.getElementById('lightbox');
+
+  const btn12 = document.getElementById('lemon2');
+  const btn13 = document.getElementById('uva2');
+  const btn14 = document.getElementById('bamboo2');
   
-  const btn2 = document.getElementById('lemon2');
-  const imagen2 = document.getElementById('final-img');
-  const title2 = document.getElementById('final-title');
-  const detail2 = document.getElementById('final-details');
-  
-  btn.addEventListener('click', () => {
-    $imagen.setAttribute('src', 'images/prueba/flower.jpg');
-    $title.textContent = "Flower"
-    $detail.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae ut corporis quia quibusdam enim!"
+  btn11.addEventListener('click', () => {
+    $imagen.setAttribute('src', 'images/difusores/Difusor-Aromatico-Flower.jpg');
+    // $lightBox.setAttribute('href', 'images/difusores/Difusor-Aromatico-Flower.jpg');
+    $title.textContent = "Aromatizador Spray - Flower"
+    $detail.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+      laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+      impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+      accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+      illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
   })
-  btn2.addEventListener('click', () => {
-    imagen2.setAttribute('src', 'images/prueba/lemon.jpg');
-    title2.textContent = "Lemon"
-    detail2.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae ut corporis quia quibusdam enim!"
+  btn12.addEventListener('click', () => {
+    $imagen.setAttribute('src', 'images/difusores/Difusor-Aromatico-Lemon.jpg');
+    $title.textContent = "Aromatizador Spray - Lemon"
+    $detail.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+      laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+      impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+      accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+      illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
+  })
+  btn13.addEventListener('click', () => {
+    $imagen.setAttribute('src', 'images/difusores/Difusor-Aromatico-Uva.jpg');
+    $title.textContent = "Aromatizador Spray - Uva"
+    $detail.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+      laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+      impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+      accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+      illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
+  })
+  btn14.addEventListener('click', () => {
+    $imagen.setAttribute('src', 'images/difusores/Difusor-Aromatico-Bamboo.jpg');
+    $title.textContent = "Aromatizador Spray - Bamboo"
+    $detail.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum qui aperiam quidem consequuntur 
+      laboriosam hic numquam, nemo minus cumque aliquid architecto, atque dignissimos ea sed explicabo 
+      impedit voluptates veniam placeat quos maxime reprehenderit amet at? Corporis laudantium quod 
+      accusantium ab, maiores, ex et autem sequi veritatis pariatur magnam nihil, 
+      illo nostrum fuga asperiores voluptatum voluptatibus sunt error esse ipsam repudiandae.`
   })
   </script>
