@@ -63,25 +63,26 @@
               </a>
               <!-- <a class="box-producto-link" href="producto-final.html">Bamboo</a> -->
               
-              <button class="bamboo box-producto-link"><img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Bamboo">Bamboo</button>
+              <button class="bamboo box-producto-link ">
+                <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Bamboo">Bamboo</button>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
-                  <a href="">
+                  <!-- <a href="" id="btn"> -->
                     <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Flower">
-                  </a>
+                  <!-- </a> -->
                   <!-- <a class="box-producto-link" href="">Flower</a> -->
-                  <button class="bamboo box-producto-link">Flower</button>
+                  <button class="bamboo box-producto-link" id="flower2">Flower</button>
                 </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="box-producto">
-                  <a href="">
+                  <!-- <a href=""> -->
                     <img src="png/rociador-prod-final.png" alt="Fragancia Kosamui Lemon">
-                  </a>
+                  <!-- </a> -->
                   <!-- <a class="box-producto-link" href="">Lemon</a> -->
-                  <button class="bamboo box-producto-link">Lemon</button>
+                  <button class="bamboo box-producto-link" id="lemon2">Lemon</button>
                 </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -110,6 +111,27 @@
     .always(function(){
       $('.loader').text('Finalizo la Carga.');
     });
-      
+    
   });
+
+  const btn = document.getElementById('flower2');
+  const $imagen = document.getElementById('final-img');
+  const $title = document.getElementById('final-title');
+  const $detail = document.getElementById('final-details');
+  
+  const btn2 = document.getElementById('lemon2');
+  const imagen2 = document.getElementById('final-img');
+  const title2 = document.getElementById('final-title');
+  const detail2 = document.getElementById('final-details');
+  
+  btn.addEventListener('click', () => {
+    $imagen.setAttribute('src', 'images/prueba/flower.jpg');
+    $title.textContent = "Flower"
+    $detail.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae ut corporis quia quibusdam enim!"
+  })
+  btn2.addEventListener('click', () => {
+    imagen2.setAttribute('src', 'images/prueba/lemon.jpg');
+    title2.textContent = "Lemon"
+    detail2.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae ut corporis quia quibusdam enim!"
+  })
   </script>
